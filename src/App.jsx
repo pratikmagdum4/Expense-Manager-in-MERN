@@ -4,9 +4,9 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Signup from './components/Signup';
 import Login from './components/Login';
 import ExpenseTracker from './components/ExpenseTracker';
+import { SignUp } from '@clerk/nextjs';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/tracker" element={<ExpenseTracker />} />
       </Routes>
