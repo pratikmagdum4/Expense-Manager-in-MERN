@@ -1,21 +1,26 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Signup from './components/Signup';
 import Login from './components/Login';
-import SignUp from './components/SignUp';
-import ExpenseTracker from './components/ExpenseTracker.jsx';
-import './App.css';
-import Home from './components/Home.jsx';
+import ExpenseTracker from './components/ExpenseTracker';
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-100 p-5">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/tracker" element={<ExpenseTracker />} />
-        </Routes>
-      </div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/tracker" element={<ExpenseTracker />} />
+      </Routes>
+      <Footer />
     </Router>
   );
 }
