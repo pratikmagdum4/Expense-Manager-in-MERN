@@ -6,7 +6,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Login from './components/Login';
 import ExpenseTracker from './components/ExpenseTracker';
-import { SignUp } from '@clerk/nextjs';
+import SignUp from './components/SignUp.jsx';
 
 function App() {
   return (
